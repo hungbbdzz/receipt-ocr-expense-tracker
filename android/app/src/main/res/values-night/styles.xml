@@ -15,4 +15,12 @@
     <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
         <item name="android:windowBackground">?android:colorBackground</item>
     </style>
+    <!-- Theme for UCropActivity preventing top toolbar overlap with status bar -->
+    <style name="UCropTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:statusBarColor">#0284C7</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="colorPrimary">#0284C7</item>
+        <item name="colorPrimaryDark">#0369A1</item>
+    </style>
 </resources>

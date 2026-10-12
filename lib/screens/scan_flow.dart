@@ -34,10 +34,18 @@ class ScanFlow {
       sourcePath: picked.path,
       uiSettings: [
         AndroidUiSettings(
-            toolbarTitle: 'Cắt viền hóa đơn',
-            lockAspectRatio: false,
-            showCropGrid: true),
-        IOSUiSettings(title: 'Cắt viền hóa đơn'),
+          toolbarTitle: 'Cắt viền hóa đơn',
+          toolbarColor: const Color(0xFF0284C7),
+          toolbarWidgetColor: Colors.white,
+          statusBarLight: false,
+          activeControlsWidgetColor: const Color(0xFF0284C7),
+          initAspectRatio: CropAspectRatioPreset.original,
+          lockAspectRatio: false,
+          showCropGrid: true,
+        ),
+        IOSUiSettings(
+          title: 'Cắt viền hóa đơn',
+        ),
       ],
     );
     if (cropped == null || !context.mounted) return;

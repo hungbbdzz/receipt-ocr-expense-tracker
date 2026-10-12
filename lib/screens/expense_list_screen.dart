@@ -148,7 +148,14 @@ class _ExpenseListScreenState extends State<ExpenseListScreen> {
     if (path != null && File(path).existsSync()) {
       return ClipRRect(
         borderRadius: BorderRadius.circular(8),
-        child: Image.file(File(path), width: 48, height: 48, fit: BoxFit.cover),
+        child: Image.file(
+          File(path),
+          width: 48,
+          height: 48,
+          fit: BoxFit.cover,
+          cacheWidth: 120,
+          cacheHeight: 120,
+        ),
       );
     }
     return CircleAvatar(

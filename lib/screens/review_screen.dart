@@ -99,7 +99,12 @@ class _ReviewScreenState extends State<ReviewScreen> {
                 if (imgPath != null && File(imgPath).existsSync())
                   ClipRRect(
                     borderRadius: BorderRadius.circular(12),
-                    child: Image.file(File(imgPath), height: 180, fit: BoxFit.cover),
+                    child: Image.file(
+                      File(imgPath),
+                      height: 180,
+                      fit: BoxFit.cover,
+                      cacheWidth: 800,
+                    ),
                   ),
                 const SizedBox(height: 16),
                 TextFormField(
